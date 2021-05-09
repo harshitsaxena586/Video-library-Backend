@@ -8,6 +8,10 @@ var router = express.Router()
 const cart = require("./Routes/cart.js");
 app.use("/cart", cart)
 
+
+const users = require("./Routes/users.js")
+app.use("/users", users)
+
 app.get('/', (req, res) => {
   res.send('hello video backend app !')
 });
