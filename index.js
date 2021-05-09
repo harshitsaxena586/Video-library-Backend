@@ -4,6 +4,8 @@ const app = express();
 var router = express.Router()
 
 
+const { initializeUserbase } = require('./IntialiseDB/UserbaseDB.js');
+initializeUserbase()
 
 const cart = require("./Routes/cart.js");
 app.use("/cart", cart)
