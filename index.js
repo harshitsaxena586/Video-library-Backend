@@ -18,7 +18,7 @@ const users = require("./Routes/users.js")
 app.use("/users", users)
 
 app.get('/', (req, res) => {
-  res.send('hello video backend app !')
+  res.send('hello  backend app !')
 });
 
 app.listen(port || 3000, () => {
