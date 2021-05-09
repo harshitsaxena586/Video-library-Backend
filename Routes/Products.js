@@ -5,15 +5,20 @@ var router = express.Router()
 const { Product } = require('../models/Product.model')
 
 
-router.use(bodyParser.json())
+// router.use(bodyParser.json())
+
+// router.route("/")
+// .get(async(req,res)=>{
+//   const products= await Product.find({})
+//   res.json({success:true,products})
+// })
+// .post((req,res)=>{
+  
+// })
 
 router.route("/")
-.get(async(req,res)=>{
-  const products= await Product.find({})
-  res.json({success:true,products})
-})
-.post((req,res)=>{
-  
+.get((req,res)=>{
+  res.json({succes:true})
 })
 
 module.exports = router
