@@ -11,6 +11,9 @@ const cart = require("./Routes/cart.js");
 app.use("/cart", cart)
 
 
+const products = require("./Routes/products.js")
+app.use("/products", products)
+
 const users = require("./Routes/users.js")
 app.use("/users", users)
 
