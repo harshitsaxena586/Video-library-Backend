@@ -5,6 +5,9 @@ var router = express.Router()
 
 
 
+const cart = require("./Routes/cart.js");
+app.use("/cart", cart)
+
 app.get('/', (req, res) => {
   res.send('hello video backend app !')
 });
