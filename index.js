@@ -2,20 +2,15 @@ const express = require('express');
 const port = process.env.PORT
 const app = express();
 var router = express.Router()
-
+var cors = require('cors')
 
 const { initializeUserbase } = require('./IntialiseDB/UserbaseDB.js');
 initializeUserbase()
 
-const cart = require("./Routes/cart.js");
-app.use("/cart", cart)
+app.use(cors())
 
-
-const products = require("./Routes/Products.js")
-app.use("/products", products)
-
-const users = require("./Routes/users.js")
-app.use("/users", users)
+const videos = require("./Routes/videos")
+app.use("/videos", videos)
 
 app.get('/', (req, res) => {
   res.send('hello  backend app !')
